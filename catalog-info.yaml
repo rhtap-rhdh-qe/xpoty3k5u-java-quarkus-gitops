@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: xpoty3k5u-java-quarkus-gitops
+  description: This is GitOps manifest for xpoty3k5u-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: xpoty3k5u-java-quarkus
+    janus-idp.io/tekton: xpoty3k5u-java-quarkus 
+    backstage.io/kubernetes-id: xpoty3k5u-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:xpoty3k5u-java-quarkus
